@@ -23,9 +23,13 @@ jobs:
     runs-on: "ubuntu-latest"
     
     steps:
-    - name: Download, copy and unzip the lastest Google Mobile Ads SDK on release binaries and iOS module folder
+    - name: Download, copy and unzip the 7.69 Google Mobile Ads SDK on release binaries and iOS module folder
       run: |
-        curl -LO https://dl.google.com/googleadmobadssdk/googlemobileadssdkios.zip
+        touch Podfile
+        echo "platform :ios, '9.0'" >> Podfile 
+        echo "pod 'Google-Mobile-Ads-SDK', '~> 7.69'" >> Podfile
+        pod install
+        zip googlemobileadssdkios.zip -r Pods/ 
 
     - name: Upload Google Mobile Ads SDK as Artifact
       uses: actions/upload-artifact@v2
@@ -90,13 +94,13 @@ jobs:
       with:
         name: googlemobileadssdkios.zip
 
-    - name: Copy and unzip the Google Mobile Ads SDK on release binaries and iOS module folder
+    - name: Copy and unzip the Google Mobile Ads SDK 7.69 on release binaries and iOS module folder
       run: |
         mkdir -p godot-${{env.CURRENT_GODOT_VERSION}}-stable/bin/release/
         unzip googlemobileadssdkios.zip -d ios/admob/lib/
-        cd ios/admob/lib
-        cd */
-        mv * ../
+        cd ios/admob/lib/Pods
+        mv Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current/* ../
+        mv GoogleUserMessagingPlatform/Frameworks/Release/* ../
 
     - name: Move the iOS module to Godot's /modules folder
       run: |
@@ -156,6 +160,6 @@ jobs:
     - name: Upload artifacts to release
       uses: AButler/upload-release-assets@v2.0
       with:
-        files: 'ios-template-*.zip/*;googlemobileadssdkios.zip/*'
+        files: 'ios-template-*.zip/*'
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         release-tag: ${{env.TAG_NAME}}
