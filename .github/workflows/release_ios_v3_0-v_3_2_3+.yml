@@ -27,6 +27,8 @@ jobs:
       run: |
         brew install cocoapods --build-from-source
         touch Podfile
+        echo "project 'ios/admob/admob.xcodeproj'" >> Podfile
+        echo "workspace 'ios/admob/admob.xcodeproj/project.xcworkspace'" >> Podfile
         echo "platform :ios, '9.0'" >> Podfile 
         echo "pod 'Google-Mobile-Ads-SDK', '~> 7.69'" >> Podfile
         pod install
