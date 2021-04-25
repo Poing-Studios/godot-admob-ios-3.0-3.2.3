@@ -1,7 +1,7 @@
-![Build%20iOS%203.0%20-%3E%203.2.3](https://github.com/Poing-Studios/Godot-AdMob-Android-iOS/workflows/Build%20iOS%203.0%20-%3E%203.2.3/badge.svg)
+[![Build%20iOS%203.0%20-%3E%203.2.3](https://github.com/Poing-Studios/Godot-AdMob-Android-iOS/workflows/Build%20iOS/badge.svg)](https://github.com/Poing-Studios/Godot-AdMob-Android-iOS/actions)
 ![test](https://img.shields.io/badge/Google%20Mobile%20ADS%20SDK-v7.69-informational)
 
-> *For Android 3.2+ check [here](https://github.com/Poing-Studios/Godot-AdMob-Android-iOS) the `master` branch*
+> *For Android 3.2+ and iOS 3.3+ check [here](https://github.com/Poing-Studios/Godot-AdMob-Android-iOS) the `master` branch*
 
 # Godot AdMob for Android and iOS
 This repository uses [GitHub Actions](https://github.com/features/actions), this means that whenever a new update is sent to the repository, the action will automatically test the code of the module, compile, compress the binary files and export to the ["Releases tab"](https://github.com/Poing-Studios/Godot-AdMob-Android-iOS/releases) of the repository for the respective operational system and versions supported by the module, like v3.2.3.
