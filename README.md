@@ -23,13 +23,11 @@ Download example project to see how the Plugin works!
 # iOS (v3.0.0 -> 3.2.3):
 - ~~We don't have pre compiled files for 3.1 and 3.1.1 [due bugs with x86_64 and arm64](https://github.com/godotengine/godot/issues/27658)~~
 - Download the ```ios-template-v{{ your_godot_version }}.zip``` in the releases tab. [STANDARD VERSION](https://github.com/Poing-Studios/Godot-AdMob-Android-iOS/releases/tag/iOS_v3.0%2B) 
-
 - Export your game to iOS
 - Copy the library ```libgodot.iphone.release.fat.a``` you have downloaded from releases tab inside the exported Xcode project. **You must delete the 'your_project_name.a' (example: AdMob.a) and rename the 'libgodot.iphone.release.fat.a' with "your_project_name.a", should be like: 'AdMob.a'.** 
 - ![](https://media2.giphy.com/media/miNlL020ZQYjK4r8e7/giphy.gif)
 - Import the [Mobile Ads SDK](https://developers.google.com/admob/ios/quick-start#import_the_mobile_ads_sdk), we recommend you using the Cocoapods since the version build on this Branch is `7.69`.
 - Add the following frameworks to the project linking it using the "Build Phases" -> "Link Binary with Libraries" option:
-	
 	- These frameworks are already in your computer
 		- AppTrackingTransparency | ```Status: (Optional) ``` (if not appear: need to update XCode or SDK version to iOS 14.0)
 		- AdSupport | ```Status: (Optional) ```
