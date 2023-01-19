@@ -1,3 +1,7 @@
+# ARCHIVED REPOSITORY FOR IOS 3.0 -> 3.2.3;
+
+# IF YOU NEED THE NEWEST PLUGIN FOR IOS PLEASE CHECK THIS LINK: https://github.com/Poing-Studios/godot-admob-ios
+
 [![Build%20iOS%203.0%20-%3E%203.2.3](https://github.com/Poing-Studios/Godot-AdMob-Android-iOS/workflows/Build%20iOS/badge.svg)](https://github.com/Poing-Studios/Godot-AdMob-Android-iOS/actions)
 ![test](https://img.shields.io/badge/Google%20Mobile%20ADS%20SDK-v7.69-informational)
 
